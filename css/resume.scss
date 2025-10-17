@@ -1,0 +1,35 @@
+.left{
+    position: relative !important;
+    height: 143vh!important;
+    .profile{
+        margin: 2vh 0 2.5vh 0!important;
+        
+    }
+    .nav-container {
+        margin: 1vh 0!important;        
+        header {
+            margin: 1vh 0!important;
+        }
+        .content{
+            margin: 2.5vh 0 0 0 !important;
+        }        
+        .button {
+            min-width:100% !important;
+            margin: .25rem 0 !important;
+            border-radius: 0!important;
+        }
+    }
+}
+
+.right{    
+    margin-top: 5vh!important;
+    margin-left: 2vw!important;
+    flex: 0 0 80%;
+    max-width: 85%;
+    header{
+        font-size: 1.5em;
+    }
+    div.section {
+        padding: 1vh 0 1vh 0;
+    }
+}

@@ -1,0 +1,80 @@
+// variables
+@import "variables";
+
+.header {
+  padding: 1vw 3vw;
+  height: 8vh;
+  box-shadow: 0 -10px 0px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.bounceContainer {
+  display: flex;
+  height: 80vh;
+  width: 100%;
+  z-index: 2;
+}
+
+.hoverRippleNav {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 0.1em;
+  margin: auto auto;
+}
+
+.row {
+  width: 99vw;
+  height: 100vh;
+  margin: 0;
+}
+.left {
+  padding: 0 0 0 1.5vh !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-align: center;
+  .nav-container {
+    width: 100%;
+  }
+  button.bottom {    
+    position: absolute;
+    bottom: 2vh;
+    left: 2vw;
+    color: white;
+    background: $primary;
+    text-transform: uppercase;
+    &:hover {
+      background: $primary-dk;
+      transition: all 0.3s ease 0s;
+      letter-spacing: 2px;
+    }
+    a {
+      color: white;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .profile img{
+    width: 30% !important;
+  }
+  button.bottom {
+    position: inherit !important;
+  }
+  .left {
+    padding-bottom: 50px !important ;
+  }
+}
+.right {
+  padding: 0 !important;
+  position: inherit !important;
+}
+@media only screen and (min-width: 1000px) {
+  .left {
+    position: fixed !important;
+    height: 100vh;
+  }
+  .right {
+    margin-left: 22vw;
+  }
+}

@@ -1,0 +1,67 @@
+@import "variables";
+
+.q{
+    background: url("characters/q.jpg");
+}
+.q-smile{
+    background: url("characters/qSmile.jpg");
+}
+.kirk{
+    background: url("characters/Kirk.jpg");
+}
+.lacutus{
+    background: url("characters/Lacutus.jpg");
+}
+.scotty{
+    background: url("characters/Scotty.jpg");
+}
+.scotty-fear{
+    background: url("characters/ScottyFear.jpg");
+}
+.spock{
+    background: url("characters/Spock.jpg");
+}
+.chekov{
+    background: url("characters/Chekov.jpg");
+}
+.klingon{
+    background: url("characters/AngryKlingon.jpg");
+}
+.happy-klingon{
+    background: url("characters/HappyKlingon.jpg");
+}
+.default{
+    background: url("characters/default.jpg");
+}
+.borg {
+    background-image: url("backgrounds/borg.png");
+}
+.borg-end {
+    background-image: url("backgrounds/borg-intimidate.jpg");
+    animation: fadein 1s;
+    border: 1px $secondary-bg solid;
+} 
+.hit{
+    background-size: 200px 200px !important;
+    background-image: url("backgrounds/hit.png");
+    animation: explode 1s ease-out;
+    border: 1px $secondary-bg solid;
+}
+.miss{
+    background-image: url("backgrounds/miss.png");
+    animation: fadein 1s;
+    border: 1px $secondary-bg solid;
+}
+@keyframes explode {
+    0% {
+        background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+        opacity: .5;
+    }
+    100% {
+        background-size: 200px 200px, 200px 200px, 40px 40px, 40px 40px;
+    }
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

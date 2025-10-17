@@ -1,0 +1,64 @@
+.q {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: url("characters/q.jpg");
+}
+
+.q-smile {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: url("characters/qSmile.jpg");
+}
+
+.kirk {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: url("characters/Kirk.jpg");
+}
+
+.lacutus {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: url("characters/Lacutus.jpg");
+}
+
+.scotty {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: url("characters/Scotty.jpg");
+}
+
+.scotty-fear {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: url("characters/ScottyFear.jpg");
+}
+
+.spock {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: url("characters/Spock.jpg");
+}
+
+.chekov {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: url("characters/Chekov.jpg");
+}
+
+.klingon {
+  background: url("characters/AngryKlingon.jpg");
+}
+
+.happy-klingon {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: url("characters/HappyKlingon.jpg");
+}
+
+.default {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: url("characters/default.jpg");
+}
+/*# sourceMappingURL=characters.css.map */

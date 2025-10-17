@@ -1,0 +1,198 @@
+@import "variables";
+
+@media (max-width: 900px) {
+    #dialogue-container{
+        width:$main-width-mobile !important;
+        //font-size: .75em;
+        padding: 1vh 0 !important;
+    }
+    #grid{
+        width:$main-width-mobile !important;
+        td{//if desktop 15/90 else 5/25
+            width:10vw !important;
+            height:5.25vh !important;
+        }
+    }
+    #mid-nav-bar{
+        width:$sidebar-width-mobile !important;
+        margin-left: $main-width-mobile +$main-margin !important;
+    }
+    #right-bar{
+        width: $sidebar-width-mobile !important;
+        .label{
+            font-size:1.25em !important;
+        }
+        .button{
+            font-size:1em !important;            
+        }
+        img.button{
+            float: none !important;
+            width:75% !important;         
+        }
+        
+    }
+}
+
+
+body {
+    background-color: black;
+    font-family: 'Impact', serif;
+    height: 100%;
+    margin: 0px;
+    font-weight: normal;
+    text-transform: none;
+    font-size: 1em;
+    letter-spacing: .75px;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.trek-bg{
+    background-color: $primary-bg;
+}
+#dialogue-container {
+    width: 78vw;
+    margin: 3vh 2vw;
+    padding: 5vh 0;
+    background-color: #7C5EEE;
+    float: left;
+    text-align: right;
+    #dialogue {
+        width: $main-width;
+        margin: $main-content-margin;
+        padding: 0 1vw;
+        background-color: $tertiary-bg;
+    }
+}
+
+
+
+#mid-nav-bar {
+    background-color: $primary-bg;
+    margin-left: $main-width + $main-margin;
+    width: $sidebar-width;
+    height: 23vh;
+    border-radius: 0 0 60px 0;
+    
+    .image-container{
+        padding: $main-content-margin;
+        margin: auto auto;
+        img {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;         
+            margin: auto auto;
+            display: block;
+            width: 15vh;
+            height: 15vh;
+            transition: 0.3s;
+        }
+    }
+}
+.border-bar{    
+    width: 88vw;
+    height: 4vh;
+}
+#btm-nav-bar {
+    margin-top: -4vh;
+    border-radius: 0 0 20px 0;
+    margin-bottom: 15px;
+}
+
+#top-main-content-bar {
+    border-radius: 0 60px 0 0;
+}
+
+#right-bar {
+    margin-top: -4vh;
+    width: $sidebar-width;
+    height: 75vh;
+    border-radius: 0 60px 0 0;
+    .main-label {
+        margin-top: 4vh;
+    }
+    .label{        
+        padding: 2vh 0;
+        color: $primary-bg;
+        text-align: center;
+        font-size: 1.75em;
+        background-color: black;
+        text-transform: uppercase;
+    }
+    .button-group {
+        width: 100%;
+        margin: 1vh 0;    
+        .button {
+            margin: .75vh 0;
+            background-color: $secondary-bg;
+            padding: 2vh 0;            
+            width: 100%;
+            line-height: 30px;
+            font-size: 1.5em;
+            transition: 0.3s;
+            text-align: left;  
+        }        
+    }
+    .options{    
+        text-align: center !important;
+        img.button{
+            width: 50%;
+            margin: 1vh auto;
+            height: 12vh;
+            padding: 1vh 3vw;
+            background-color: $tertiary-bg;
+            border: 1px $secondary-bg;
+            border-radius: 5px;
+            transition:  0.3s;      
+            cursor: pointer;
+            &:hover {
+                background-color: $secondary-bg;
+                color: white;
+            }
+        }
+    }
+}
+
+#main-content {
+    background-color: black;
+    width: 100%;
+    display: inline-flex;
+    #grid {
+        background-color: black;
+        background-image: url("backgrounds/space.JPG");
+        background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+        background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+        height: 63vh;
+        width: $main-width;
+        float: right;
+        margin: $main-content-margin;
+        animation: zoom 8s;
+        border: none;
+        td{//if desktop 15/90 else 5/25
+            cursor: pointer;
+            border: 1px $primary-bg solid;
+            width:15vw;
+            height:10vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: 1.5s linear;         
+        }
+    }
+}
+
+@keyframes zoom {
+    0% {
+        background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    }
+    50% {
+        background-size: 200px 200px, 200px 200px, 40px 40px, 40px 40px;
+    }
+    100% {
+        background-size: 100px 100px, 100px 100px, 20px 20px, 0px 0px;
+    }
+}
+
+
+

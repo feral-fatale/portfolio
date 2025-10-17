@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Memory Game</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="images.css">
+    <link rel="stylesheet" type="text/css" href="modal.css">
+    <script language="JavaScript" src="BS.js"></script>
+
+</head>
+
+<body onload='Difficulty(1)'>
+    <div class="container">
+        <div id="dialogue-container">
+            <span id="dialogue"></span>
+        </div>
+        <div id="mid-nav-bar" class="trek-bg">
+            <div class="image-container"><img id="character" class="default" alt=""></div>
+        </div>
+        <div id="btm-nav-bar" class="border-bar trek-bg">
+        </div>
+        <div id="top-main-content-bar" class="border-bar trek-bg">
+        </div>
+        <div id="main-content" class="trek-bg">
+            <div id="grid">
+                <table>
+                    <tr>
+                        <script language='JavaScript'>
+                            var totalSpaces = 90;
+                            var spacesPerLine = 15;
+                            for (i = 1; i <= totalSpaces; i++) {
+                                document.write("<td id='" + i + "'></td>");
+                                if (((i % spacesPerLine) == 0) && i < totalSpaces) document.write("</tr><tr>");
+                            }  
+                        </script>
+                    </tr>
+                </table>
+            </div>
+            <div id="right-bar" class="trek-bg">
+                <div class="label main-label">Status</div>
+                <div class="button-group ">
+                    <a>
+                        <div class="button">Scans: <span id="scan"></span></div>
+                    </a>
+                    <a>
+                        <div class="button">Missiles: <span id="missile"></span></div>
+                    </a>
+                </div>
+                <div class="label">Controls</div>
+                <div class="button-group options">
+                    <img class="button" onClick='sonarOn()' src="images/scan.png">
+                    <img class="button" onClick='fireAllTorpedoes()' src="images/klingon.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="open-modal" class="modal-window hide">
+        <div>
+            <h1>Play again?</h1>
+            <div class="container">
+                <div class="modal-body">
+                    <span>Wins: </span><span id="win-output"></span>
+                    <span>Losses: </span><span id="loss-output"></span>
+                </div>
+                <button class="primary" onclick="playAgain('yes');">Yes</button>
+                <button onclick="playAgain('no');">No</button>
+            </div>
+        </div>
+    </div>
+    <div class="hide">
+        <img src="characters/AngryKlingon.jpg">
+        <img src="characters/Chekov.jpg">
+        <img src="characters/default.jpg">
+        <img src="characters/HappyKlingon.jpg">
+        <img src="characters/Kirk.jpg">
+        <img src="characters/Lacutus.jpg">
+        <img src="characters/q.jpg">
+        <img src="characters/qSmile.jpg">
+        <img src="characters/Scotty.jpg">
+        <img src="characters/ScottyFear.jpg">
+        <img src="characters/Spock.jpg">
+        <img src="backgrounds/hit.png">
+        <img src="backgrounds/miss.png">
+        <img src="backgrounds/borg.png">
+        <img src="backgrounds/borg-intimidate.jpg">
+        <img src="backgrounds/space.jpg">
+    </div>
+</body>
+
+</html>

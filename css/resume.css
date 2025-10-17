@@ -1,0 +1,44 @@
+.left {
+  position: relative !important;
+  height: 143vh !important;
+}
+
+.left .profile {
+  margin: 2vh 0 2.5vh 0 !important;
+}
+
+.left .nav-container {
+  margin: 1vh 0 !important;
+}
+
+.left .nav-container header {
+  margin: 1vh 0 !important;
+}
+
+.left .nav-container .content {
+  margin: 2.5vh 0 0 0 !important;
+}
+
+.left .nav-container .button {
+  min-width: 100% !important;
+  margin: .25rem 0 !important;
+  border-radius: 0 !important;
+}
+
+.right {
+  margin-top: 5vh !important;
+  margin-left: 2vw !important;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 80%;
+          flex: 0 0 80%;
+  max-width: 85%;
+}
+
+.right header {
+  font-size: 1.5em;
+}
+
+.right div.section {
+  padding: 1vh 0 1vh 0;
+}
+/*# sourceMappingURL=resume.css.map */

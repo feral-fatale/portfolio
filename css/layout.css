@@ -1,0 +1,99 @@
+.header {
+  padding: 1vw 3vw;
+  height: 8vh;
+  -webkit-box-shadow: 0 -10px 0px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 -10px 0px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.bounceContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80vh;
+  width: 100%;
+  z-index: 2;
+}
+
+.hoverRippleNav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  grid-gap: 0.1em;
+  margin: auto auto;
+}
+
+.row {
+  width: 99vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.left {
+  padding: 0 0 0 1.5vh !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.left .nav-container {
+  width: 100%;
+}
+
+.left button.bottom {
+  position: absolute;
+  bottom: 2vh;
+  left: 2vw;
+  color: white;
+  background: #ed332f;
+  text-transform: uppercase;
+}
+
+.left button.bottom:hover {
+  background: #a11210;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  letter-spacing: 2px;
+}
+
+.left button.bottom a {
+  color: white;
+}
+
+@media only screen and (max-width: 900px) {
+  .profile img {
+    width: 30% !important;
+  }
+  button.bottom {
+    position: inherit !important;
+  }
+  .left {
+    padding-bottom: 50px !important;
+  }
+}
+
+.right {
+  padding: 0 !important;
+  position: inherit !important;
+}
+
+@media only screen and (min-width: 1000px) {
+  .left {
+    position: fixed !important;
+    height: 100vh;
+  }
+  .right {
+    margin-left: 22vw;
+  }
+}
+/*# sourceMappingURL=layout.css.map */
