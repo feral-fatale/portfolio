@@ -15,41 +15,46 @@ var gameInProgress = false;
 
 document.onclick = checkClick;
 
+document.addEventListener("DOMContentLoaded", function() {
+    Difficulty(1);  // Call the function here
+});
+
 function Difficulty(level) {
 	gameInProgress = true;
-	document.getElementById("missile").innerHTML = missiles;
-	document.getElementById("scan").innerHTML = sweeps;
 	if (level == 1) {
 		missiles = 75;
 		sweeps = 8;
 		difficulty = 1;
-		initialize();
 	}
 	else if (level == 2) {
 		missiles = 30;
 		sweeps = 4;
 		difficulty = 2;
-		initialize();
 	}
 	else if (level == 3) {
 		missiles = 20;
 		sweeps = 2;
 		difficulty = 3;
-		initialize();
 	}
 	else if (level == 4) {
 		missiles = 15;
 		sweeps = 1;
 		difficulty = 4;
-		initialize();
 	}
+	
+	document.getElementById('scan').textContent = sweeps;
+	document.getElementById('missile').textContent = missiles;
+	initialize();
 }
+
+
 
 function initialize() {//sets borg and empty locations	
 	var num = 0;
 	//display numbers of winss/lossess and missile/sweeps status
+	document.getElementById('scan').textContent = sweeps;
 	document.getElementById("missile").innerHTML = missiles;
-	document.getElementById("scan").innerHTML = sweeps;
+	//document.getElementById("scan").innerHTML = sweeps;
 	//assign all to empty			
 	for (num = 1; num <= totalSpaces; num++) {
 		battleship[num] = "empty";
@@ -66,6 +71,7 @@ function initialize() {//sets borg and empty locations
 			assignedBorg++;
 		}
 	}
+	console.log("wins: "+wins +" lesses: "+losses);
 	if (wins == 0 && losses == 0) {//use first intro only for first game
 		dialogue(0);
 	} else {
@@ -179,6 +185,7 @@ function Qapla() {
 	endDialogue("qapla");
 	reset();
 }
+
 function victory() {
 	gameInProgress = false;
 	wins++;
@@ -187,6 +194,7 @@ function victory() {
 	endDialogue("win");
 	reset();
 }
+
 function defeat() {
 	gameInProgress = false;
 	losses++;
@@ -199,7 +207,7 @@ function reset() {
 	hit = 0;
 	missiles = 0;
 	sweeps = 0;
-	if (difficulty < 4 && lastGameStatus == "qapla") {
+	if (lastGameStatus == "qapla") {
 		setTimeout("endDialogue('klingon')", 3000);
 	} else if (difficulty < 4 && lastGameStatus == "win") {
 		setTimeout("endDialogue('won-easy')", 3000);
@@ -233,6 +241,7 @@ function playAgain(status) {
 		hideModal();
 }
 function dialogue(dialoguePart) {
+	console.log("dialogue started at :"+dialoguePart);
 	if (gameInProgress == true) {
 		document.getElementById("character").className = "";
 		switch (dialoguePart) {
@@ -246,7 +255,7 @@ function dialogue(dialoguePart) {
 				document.getElementById("dialogue").innerHTML = "We are the Borg. You will be assimilated. Resistance is futile.";
 				document.getElementById("character").className = "lacutus";
 				dialoguePart++;
-				setTimeout("dialogue(" + dialoguePart + ")", 4500);
+				setTimeout("dialogue(" + dialoguePart + ")", 4000);
 				break;
 
 			case 2:

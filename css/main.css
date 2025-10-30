@@ -78,6 +78,10 @@ li {
   display: none !important;
 }
 
+.invisible{
+  visibility:hidden;
+}
+
 .clickable {
   cursor: pointer;
   -webkit-transition-duration: 0.25s;

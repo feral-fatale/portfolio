@@ -4,14 +4,14 @@
 <head>
     <title>Memory Game</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="stylesheet" type="text/css" href="images.css">
-    <link rel="stylesheet" type="text/css" href="modal.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/images.css">
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
     <script language="JavaScript" src="BS.js"></script>
 
 </head>
 
-<body onload='Difficulty(1)'>
+<body>
     <div class="container">
         <div id="dialogue-container">
             <span id="dialogue"></span>
@@ -42,16 +42,16 @@
                 <div class="label main-label">Status</div>
                 <div class="button-group ">
                     <a>
-                        <div class="button">Scans: <span id="scan"></span></div>
+                        <div class="button"> Scans: <span id="scan">0</span></div>
                     </a>
                     <a>
-                        <div class="button">Missiles: <span id="missile"></span></div>
+                        <div class="button"> Missiles: <span id="missile">0</span></div>
                     </a>
                 </div>
                 <div class="label">Controls</div>
                 <div class="button-group options">
-                    <img class="button" onClick='sonarOn()' src="images/scan.png">
-                    <img class="button" onClick='fireAllTorpedoes()' src="images/klingon.png">
+                    <img class="button" onClick='sonarOn()' src="images/icons/scan.png">
+                    <img class="button" onClick='fireAllTorpedoes()' src="images/icons/klingon.png">
                 </div>
             </div>
         </div>
@@ -68,24 +68,6 @@
                 <button onclick="playAgain('no');">No</button>
             </div>
         </div>
-    </div>
-    <div class="hide">
-        <img src="characters/AngryKlingon.jpg">
-        <img src="characters/Chekov.jpg">
-        <img src="characters/default.jpg">
-        <img src="characters/HappyKlingon.jpg">
-        <img src="characters/Kirk.jpg">
-        <img src="characters/Lacutus.jpg">
-        <img src="characters/q.jpg">
-        <img src="characters/qSmile.jpg">
-        <img src="characters/Scotty.jpg">
-        <img src="characters/ScottyFear.jpg">
-        <img src="characters/Spock.jpg">
-        <img src="backgrounds/hit.png">
-        <img src="backgrounds/miss.png">
-        <img src="backgrounds/borg.png">
-        <img src="backgrounds/borg-intimidate.jpg">
-        <img src="backgrounds/space.jpg">
     </div>
 </body>
 
